@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>GS Lans Platform</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="dropit.css" rel="stylesheet" type="text/css">
+    <script src="code/includes/jquery-2.0.3.min.js"></script>
+    <script src="code/includes/jquery-ui.min.js"></script>
+    <script src="code/includes/konami.js"></script>
+    <script src="code/includes/dropit.js"></script>
+    <script src="code/lanplatform.js"></script>
+    
+</head>
+<body>
+    <div class="pageBox">
+        <div class="navArea">
+            <div class="navTitle"><span style="vertical-align:middle;padding-left:16px;padding-right:32px">GS Lans Platform</span></div>
+            <div id="mainNavHome" class="navBox">
+                <div id="mainNavHomeButton" class="navButton">
+                    Home
+                </div>
+                <div id="mainNavHomeStatus" class="navStatus active"></div>
+            </div>
+            <div id="mainNavGames" class="navBox">
+                <div id="mainNavGamesButton" class="navButton">
+                    Games
+                </div>
+                <div id="mainNavGamesStatus" class="navStatus"></div>
+            </div>
+            <div id="mainNavJukebox" class="navBox hidden">
+                <div id="mainNavJukeboxButton" class="navButton">
+                    &#x1F355 Jukebox
+                </div>
+                <div id="mainNavJukeboxStatus" class="navStatus"></div>
+            </div>
+            <div id="mainNavChat" class="navBox">
+                <div id="mainNavChatButton" class="navButton">
+                    Chat
+                </div>
+                <div id="mainNavChatStatus" class="navStatus"></div>
+            </div>
+            <div id="mainNavDoge" class="navBox hidden">
+                <div id="mainNavDogeButton" class="navButton">
+                    🐕
+                </div>
+                <div id="mainNavDogeStatus" class="navStatus alert"></div>
+            </div>
+            <div id="mainNavAdmin" class="navBox hidden">
+                <div id="mainNavAdminButton" class="navButton">
+                    Admin
+                </div>
+                <div id="mainNavAdminStatus" class="navStatus"></div>
+            </div>
+            <div class="navAccount">
+                
+            </div>
+        </div>
+        <div class="navAreaBottom"></div>
+        <div id="mainNavHomeContent" class="navContent active">
+            <table style="width:100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="vertical-align:top">
+                        <div class="contentBox" style="width:100%">
+                            <div class="contentTitle">Current Status
+                                <div class="contentTitleButton hidden" id="newsQuickSetSection">
+                                    <ul class="dropMenu">
+                                        <li>
+                                            <a>Set Status <span style="font-size: 12px">▼</span></a>
+                                            <ul style="width: 200px">
+                                                <li><a class="setStatusButton" statusid="1">Nothing</a></li>
+                                                <li><a class="setStatusButton" statusid="2">Pool</a></li>
+                                                <li><a class="setStatusButton" statusid="3">Dinner</a></li>
+                                                <li><a class="setStatusButton" statusid="4">The Specialists 2.1</a></li>
+                                                <li><a class="setStatusButton" statusid="5">Zombie Panic!</a></li>
+                                                <li><a class="setStatusButton" statusid="6">Sven Coop</a></li>
+                                                <li><a class="setStatusButton" statusid="7">CSGO</a></li>
+                                                <li><a class="setStatusButton" statusid="8">Garry's Mod</a></li>
+                                                <li><a class="setStatusButton" statusid="9">Paranoia</a></li>
+                                                <li><a class="setStatusButton" statusid="10">PAYDAY 2</a></li>
+                                                <li><a class="setStatusButton" statusid="11">Serious Sam TSE</a></li>
+                                                <li><a class="setStatusButton" statusid="12">Serious Sam BFE</a></li>
+                                                <li><a class="setStatusButton" statusid="13">Natural Selection 2</a></li>
+                                                <li><a class="setStatusButton" statusid="14">Contagion</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="contentTitleSpacer"></div>
+                            <div class="contentArea">
+                                <div class="newsBox active" id="newsBox0">
+                                    Oops!<br /><br />
+
+                                    Either someone forgot to set something or the server cannot be contacted!
+                                </div>
+                                <div class="newsBox" id="newsBox1">
+                                    Nothing is happening!<br /><br />
+                                </div>
+                                <div class="newsBox" id="newsBox2">
+                                    Pool<br/>
+                                    <img src="media/news/pool.png"/>
+                                </div>
+                                <div class="newsBox" id="newsBox3">
+                                    Dinner<br />
+                                    <img src="media/news/pool.png" />
+                                </div>
+                                <div class="newsBox" id="newsBox4">
+                                    The Specialists 2.1<br/>
+
+                                    <div style="width: 100%; height:64vh; background-image: url('media/news/ts21.png'); background-repeat: no-repeat; background-size:contain; background-position: center; margin: 0 auto"></div><br />
+
+                                    <span class="gameLink color" game="7" section="11">Install Details</span>
+                                </div>
+                                <div class="newsBox" id="newsBox5">
+                                    Zombie Panic!<br />
+                                    <img src="media/news/zp.png" /><br />
+                                    <span class="gameLink color" game="6" section="11">Install Details</span>
+                                </div>
+                                <div class="newsBox" id="newsBox6">
+                                    Sven Coop<br/>
+                                    <img src="media/news/sven.png"/><br/>
+                                    <span class="gameLink color" game="16" section="11">Install Details</span>
+                                </div>
+                                <div class="newsBox" id="newsBox7">
+                                    Counter-Strike: Global Offensive<br />
+                                    <img src="media/news/csgo.png" /><br />
+                                </div>
+                                <div class="newsBox" id="newsBox8">
+                                    Garry's Mod: Sandbox<br />
+                                    <img src="media/news/gmod_sandbox.png" /><br />
+                                    <span class="gameLink color" game="2" section="12">Install Details</span>
+                                </div>
+                                <div class="newsBox" id="newsBox9">
+                                    Garry's Mod: Paranoia<br />
+                                    <img src="media/news/gmod_paranoia.png" /><br />
+                                    <span class="gameLink color" game="2" section="12">Install Details</span>
+                                </div>
+                                <div class="newsBox" id="newsBox11">
+                                    Serious Sam HD: TSE<br/>
+                                    <img src="media/news/sam_tse.png"/><br/>
+                                </div>
+                                <div class="newsBox" id="newsBox12">
+                                    Serious Sam 3: BFE<br />
+                                    <img src="media/news/sam_bfe.png" /><br />
+                                </div>
+                                <div class="newsBox" id="newsBox13">
+                                    Natural Selection 2<br />
+                                    <img src="media/news/ns2.png" /><br />
+                                </div>
+                                <div class="newsBox" id="newsBox10">
+                                    PAYDAY 2<br/>
+                                    <img src="media/news/pd2.png"/><br/>
+                                </div>
+                                <div class="newsBox" id="newsBox14">
+                                    Contagion<br />
+                                    <img src="media/news/contagion.png" /><br />
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width:16px"></td>
+                    <td style="width:400px;vertical-align:top">
+                        <div class="contentBox" style="width:100%">
+                            <div class="contentTitle">Guest Accounts</div>
+                            <div class="contentTitleSpacer"></div>
+                            <div class="contentArea" id="homeAcctArea">
+                                
+                            </div>
+                        </div>
+                        <div class="contentSpacer"></div>
+                        <div class="contentBox" style="width:100%">
+                            <div class="contentTitle">Game Installs</div>
+                            <div class="contentTitleSpacer"></div>
+                            <div class="contentArea">
+                                <span class="gameLink" game="7" section="11">The Specialists 2.1</span><br />
+                                <span class="gameLink" game="6" section="11">Zombie Panic!</span><br />
+                                <span class="gameLink" game="16" section="11">Sven Coop</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="mainNavGamesContent" class="navContent">
+            <table style="width:100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="width:300px;vertical-align:top">
+                        <div class="contentBox" style="width:100%">
+                            <div class="contentTitle">Games</div>
+                            <div class="contentTitleSpacer"></div>
+                            <div class="contentArea">
+                                <span class="dynamicButton" id="gamesNavTS21"><span class="dynamicButtonSymbol" id="gamesNavTS21Symbol">+ </span>The Specialists 2.1</span><br />
+                                <div class="dynamicBox" id="gamesNavTS21Box">
+                                    <div style="margin-left:18px">
+                                        <span class="gameNavButton" id="gameNavButton7-11" game="7" section="11">Install (Manual)</span>
+                                    </div>
+                                </div>
+                                <span class="dynamicButton" id="gamesNavZP"><span class="dynamicButtonSymbol" id="gamesNavZPSymbol">+ </span>Zombie Panic!</span><br />
+                                <div class="dynamicBox" id="gamesNavZPBox">
+                                    <div style="margin-left:18px">
+                                        <span class="gameNavButton" id="gameNavButton6-11" game="6" section="11">Install (Manual)</span>
+                                    </div>
+                                </div>
+                                <span class="dynamicButton" id="gamesNavSven"><span class="dynamicButtonSymbol" id="gamesNavSvenSymbol">+ </span>Sven Coop</span><br />
+                                <div class="dynamicBox" id="gamesNavSvenBox">
+                                    <div style="margin-left:18px">
+                                        <span class="gameNavButton" id="gameNavButton16-11" game="16" section="11">Install (Manual)</span>
+                                    </div>
+                                </div>
+                                <span class="dynamicButton" id="gamesNavGmod"><span class="dynamicButtonSymbol" id="gamesNavGmodSymbol">+ </span>Garry's Mod</span><br />
+                                <div class="dynamicBox" id="gamesNavGmodBox">
+                                    <div style="margin-left:18px">
+                                        <span class="gameNavButton" id="gameNavButton2-12" game="2" section="12">Install (Content)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="width:16px"></td>
+                    <td style="vertical-align:top">
+                        <div class="contentTitle" id="gamesContentTitle">Welcome to the games section!</div>
+                        <div class="contentTitleSpacer"></div>
+                        <div class="contentArea">
+                            <div class="gameContent active" id="gameContentIntro">
+                                Click on a game section to begin.
+                            </div>
+                            <div class="gameContent" id="gameContent7-1" name="The Specialists 2.1">
+                                Genre: First Person Shooter<br />
+                                Release: April 2004<br />
+                                OS Support: Windows<br />
+                                System Requirements: Potato<br /><br />
+                                The Specialists is a stylistic deathmatch FPS.  It is heavily influenced by John Woo action movies, 80s and 90s action movies, and The Matrix.<br /><br />
+                                <img src="media/news/ts21.png" />
+                            </div>
+                            <div class="gameContent" id="gameContent7-11" name="The Specialists 2.1 > Install (Manual)">
+                                <span class="gameInstallStep">Step 1</span><br />
+                                <div class="gameInstallStepBox">Open up this URL in File Explorer: <b>\\LanPlatform\Installs\The Specialists 2.1</b></div><br />
+                                <img src="media/install/manual/install-1.png" /><br /><br />
+                                <span class="gameInstallStep">Step 2</span><br />
+                                <div class="gameInstallStepBox">Locate your <b>Steam</b> folder in a separate window.</div><br />
+                                <img src="media/install/manual/install-2.png" /><br /><br />
+                                <span class="gameInstallStep">Step 3</span><br />
+                                <div class="gameInstallStepBox">Go into the <b>steamapps</b> folder that is located in your Steam folder.</div><br />
+                                <img src="media/install/manual/install-3.png" /><br /><br />
+                                <span class="gameInstallStep">Step 4</span><br />
+                                <div class="gameInstallStepBox">
+                                    Copy the contents located in <b>\\LanPlatform\Installs\The Specialists 2.1</b> into the <b>steamapps</b> folder.<br />
+                                    <b>Note:</b> Do not copy the entire \\LanPlatform\Installs\The Specialists 2.1 folder, only copy the contents inside it.
+                                </div><br />
+                                <img src="media/install/manual/install-4.png" /><br /><br />
+                                <span class="gameInstallStep">Step 5</span><br />
+                                <div class="gameInstallStepBox">Restart Steam.</div>
+                            </div>
+                            <div class="gameContent" id="gameContent7-20" name="The Specialists 2.1 > Stats">
+                                stats
+                            </div>
+                            <div class="gameContent" id="gameContent6-1" name="Zombie Panic!">
+                                game info
+                            </div>
+                            <div class="gameContent" id="gameContent6-11" name="Zombie Panic! > Install (Manual)">
+                                <span class="gameInstallStep">Step 1</span><br />
+                                <div class="gameInstallStepBox">Open up this URL in File Explorer: <b>\\LanPlatform\Installs\Zombie Panic</b></div><br />
+                                <img src="media/install/manual/install-1.png" /><br /><br />
+                                <span class="gameInstallStep">Step 2</span><br />
+                                <div class="gameInstallStepBox">Locate your <b>Steam</b> folder in a separate window.</div><br />
+                                <img src="media/install/manual/install-2.png" /><br /><br />
+                                <span class="gameInstallStep">Step 3</span><br />
+                                <div class="gameInstallStepBox">Go into the <b>steamapps</b> folder that is located in your Steam folder.</div><br />
+                                <img src="media/install/manual/install-3.png" /><br /><br />
+                                <span class="gameInstallStep">Step 4</span><br />
+                                <div class="gameInstallStepBox">
+                                    Copy the contents located in <b>\\LanPlatform\Installs\Zombie Panic</b> into the <b>steamapps</b> folder.<br />
+                                    <b>Note:</b> Do not copy the entire \\LanPlatform\Installs\Zombie Panic folder, only copy the contents inside it.
+                                </div><br />
+                                <img src="media/install/manual/install-4.png" /><br /><br />
+                                <span class="gameInstallStep">Step 5</span><br />
+                                <div class="gameInstallStepBox">Restart Steam.</div>
+                            </div>
+                            <div class="gameContent" id="gameContent6-20" name="Zombie Panic! > Stats">
+                                stats
+                            </div>
+                            <div class="gameContent" id="gameContent16-1" name="Sven Coop">
+                                game info
+                            </div>
+                            <div class="gameContent" id="gameContent16-11" name="Sven Coop > Install (Manual)">
+                                <span class="gameInstallStep">Step 1</span><br />
+                                <div class="gameInstallStepBox">Open up this URL in File Explorer: <b>\\LanPlatform\Installs\Sven Coop</b></div><br />
+                                <img src="media/install/manual/install-1.png" /><br /><br />
+                                <span class="gameInstallStep">Step 2</span><br />
+                                <div class="gameInstallStepBox">Locate your <b>Steam</b> folder in a separate window.</div><br />
+                                <img src="media/install/manual/install-2.png" /><br /><br />
+                                <span class="gameInstallStep">Step 3</span><br />
+                                <div class="gameInstallStepBox">Go into the <b>steamapps</b> folder that is located in your Steam folder.</div><br />
+                                <img src="media/install/manual/install-3.png" /><br /><br />
+                                <span class="gameInstallStep">Step 4</span><br />
+                                <div class="gameInstallStepBox">
+                                    Copy the contents located in <b>\\LanPlatform\Installs\Sven Coop</b> into the <b>steamapps</b> folder.<br />
+                                    <b>Note:</b> Do not copy the entire \\LanPlatform\Installs\Sven Coop folder, only copy the contents inside it.
+                                </div><br />
+                                <img src="media/install/manual/install-4.png" /><br /><br />
+                                <span class="gameInstallStep">Step 5</span><br />
+                                <div class="gameInstallStepBox">Restart Steam.</div>
+                            </div>
+                            <div class="gameContent" id="gameContent16-20" name="Sven Coop > Stats">
+                                stats
+                            </div>
+                            <div class="gameContent" id="gameContent2-1" name="Garry's Mod">
+                                game info
+                            </div>
+                            <div class="gameContent" id="gameContent2-12" name="Garry's Mod > Install (Content)">
+                                <div style="font-size:18px;text-align:center">
+                                    <span class="gameLink color" game="2" section="10">Automatic Install</span> | <span class="gameLink color" game="2" section="11">Manual Install</span> | <span style="color:#88d184;font-weight:bold">Content Install</span><br /><br />
+                                </div>
+                                <span class="gameInstallStep">Step 1</span><br />
+                                <div class="gameInstallStepBox">Download the LPInstaller: <span style="color:#ffaa02;font-weight:bold"><a href="downloads/LPInstaller.exe">Download Now</a></span></div><br />
+                                <span class="gameInstallStep">Step 2</span><br />
+                                <div class="gameInstallStepBox">Run the installer.</div><br />
+                                <img src="media/install/auto2/install-1.png" /><br /><br />
+                                <span class="gameInstallStep">Step 3</span><br />
+                                <div class="gameInstallStepBox">
+                                    The installer will open with your Steam folder preselected.<br />
+                                    <b>Note:</b> If it is not automatically selected use Browse to navigate to it.
+                                </div><br />
+                                <img src="media/install/auto2/install-2.png" /><br /><br />
+                                <span class="gameInstallStep">Step 4</span><br />
+                                <div class="gameInstallStepBox">Select Garry's Mod Content from the install list.</div><br />
+                                <img src="media/install/auto2/install-3-2b.png" /><br /><br />
+                                <span class="gameInstallStep">Step 5</span><br />
+                                <div class="gameInstallStepBox">Click Install to start the installation process.</div><br />
+                                <img src="media/install/auto2/install-3-2b.png" /><br /><br />
+                                <span class="gameInstallStep">Step 6</span><br />
+                                <div class="gameInstallStepBox">Restart Steam.</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="mainNavJukeboxContent" class="navContent">
+            <div class="contentTitle">Menu Options</div>
+            <div class="contentTitleSpacer"></div>
+            <div style="display: table; width: 100%">
+                <div style="display: table-row">
+                    <div style="display: table-cell; width: 200px">
+                        <div class="contentTitle">Playlists</div>
+                        <div class="contentTitleSpacer"></div>
+                        <div class="contentArea noborder" id="jukeboxPlaylistArea" style="height: 100%">
+                            <div class="playlistButton">&nbsp;&nbsp;&nbsp;Song Library</div>
+                            <div class="playlistButton">&nbsp;&nbsp;&nbsp;Jukebox Queue</div>
+                            <div class="playlistButton">&nbsp;&nbsp;&nbsp;Personal Queue</div>
+                        </div>
+                    </div>
+                    <div style="display: table-cell; width: 16px">
+
+                    </div>
+                    <div style="display: table-cell">
+                        <div class="contentTitle">Jukebox Queue</div>
+                        <div class="contentTitleSpacer"></div>
+                        <div class="contentArea noborder" id="jukeboxPlaylistGlobal">
+                            <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                <tr class="playlistRow">
+                                    <td class="playlistRowCell">
+
+                                    </td>
+                                    <td class="playlistRowCell">
+                                        Song
+                                    </td>
+                                    <td class="playlistRowCell">
+                                        Artist
+                                    </td>
+                                    <td class="playlistRowCell">
+                                        Album
+                                    </td>
+                                    <td class="playlistRowCell">
+                                        Added by
+                                    </td>
+                                </tr>
+                                <tr class="playlistRow">
+                                    <td class="playlistAddButton">
+                                        +
+                                    </td>
+                                    <td class="playlistRowCell">
+                                        Turbo Killer
+                                    </td>
+                                    <td class="playlistRowCell">
+                                        Carpenter Brut
+                                    </td>
+                                    <td class="playlistRowCell">
+                                        EP III
+                                    </td>
+                                    <td class="playlistRowCell">
+                                        Minimum
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="contentArea hidden noborder" id="jukeboxPlaylistPersonal">
+
+                        </div>
+                        <div class="contentArea hidden noborder" id="jukeboxSearchArea">
+
+                        </div>
+                        <div class="contentTitleSpacer"></div>
+                        <div class="contentTitle">125 Songs <span style="float: right">Page 3 of 25 < - ></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="contentTitleSpacer"></div>
+        </div>
+        <div id="mainNavChatContent" class="navContent">
+            Chat
+        </div>
+        <div id="mainNavAdminContent" class="navContent">
+            Admin
+        </div>
+        <div id="mainNavDogeContent" class="navContent">
+            <div style="display:table;width:100%">
+                <div style="display:table-row">
+                    <div style="display:table-cell;width:300px;vertical-align:top">
+                        <div class="contentBox" style="width:100%">
+                            <div class="contentTitle">Commands</div>
+                            <div class="contentTitleSpacer"></div>
+                            <div class="contentArea">
+                                <span class="dynamicButton" id="dogeNavHL"><span class="dynamicButtonSymbol" id="gamesNavHLSymbol">+ </span>Half-Life</span><br />
+                                <div class="dynamicBox" id="dogeNavHLBox">
+                                    <div style="margin-left:18px">
+                                        <span class="gameNavButton" id="gameNavButton1-10" game="1" section="10">Install (Automatic)</span><br />
+                                        <span class="gameNavButton" id="gameNavButton1-11" game="1" section="11">Install (Manual)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display:table-cell;width:16px"></div>
+
+                    <div style="display:table-cell">
+                        <div class="contentBox" style="width:100%;vertical-align:top">
+                            <div class="contentTitle" id="gamesContentTitle">Wow such secrets</div>
+                            <div class="contentTitleSpacer"></div>
+                            <div class="contentArea">
+                                <div class="gameContent active" id="gameContentIntro">
+                                    Click on a command section to begin.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div style="width:800px;height:1px"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,516 @@
+﻿html
+{
+    max-height:100%;
+    height: 100%;
+
+    background-color: #202020;
+}
+
+html.doge
+{
+    background-image: url("media/doge64.png");
+    background-size: cover;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+
+    max-height: 100%;
+    height: 100%;
+
+    
+    color: #e9eaed;
+
+    font-family: 'Segoe UI', 'Lucida Grande', Verdana;
+    font-size: 14px;
+}
+
+img
+{
+    margin: 0;
+    padding: 0;
+}
+
+a
+{
+    color: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
+    outline: 0;
+}
+
+table, tr, td
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.pageBox
+{
+    width: 100%;
+    height: 100%;
+    display: table;
+
+    background-image: url("media/background-1.png");
+    background-repeat: repeat;
+}
+
+.inputField
+{
+    border: 1px solid #9cdcfe;
+    border-radius: 0;
+
+    background-color: #2c3640;
+
+    color: #e9eaed;
+}
+
+.inputField.failed
+{
+    border: 1px solid #dd3e3b;
+}
+
+.spacerVertical
+{
+    width: 1px;
+
+    background-color: #E0E0E0;
+}
+
+.spacerHorizontal
+{
+    width: 100%;
+    height: 1px;
+
+    background-color: #E0E0E0;
+}
+
+.dynamicButton
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    cursor: pointer;
+}
+
+.dynamicButton.hover
+{
+    color: #9cdcfe;
+}
+
+.dynamicButtonSymbol
+{
+    color: #ffaa02;
+}
+
+.dynamicBox
+{
+    display: none;
+}
+
+.dynamicBox.active
+{
+    display: initial;
+}
+
+.navArea
+{
+    height: 52px;
+    //width: 100%;
+
+    background-color: #242d37;
+
+    font-size: 32px;
+}
+
+.navAreaBottom
+{
+    height: 1px;
+    width: 100%;
+
+    background-color: #141b21;
+}
+
+.navTitle
+{
+    float: left;
+}
+
+.navAccount
+{
+    float: right;
+
+    margin-right: 8px;
+
+    vertical-align: bottom;
+    text-align: right;
+    font-size: 16px;
+
+    color: #9cdcfe;
+}
+
+.navBox
+{
+    color: #9cdcfe;
+
+    float: left;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    cursor: pointer;
+}
+
+.navBox.hidden
+{
+    display: none;
+}
+
+.navSpacer
+{
+    width: 1px;
+    height: 52px;
+
+    float: left;
+
+    background-color: #141b21;
+}
+
+.navButton
+{
+    height: 48px;
+
+    font-size: 26px;
+    text-align: center;
+
+    padding-left: 16px;
+    padding-right: 16px;
+    
+    display: table-cell;
+    vertical-align: middle;
+
+    background-color: #242d37;
+}
+
+.navButton.hover
+{
+    background-color: #2c3640;
+}
+
+.navStatus
+{
+    height: 4px;
+
+    background-color: #222222;
+
+    vertical-align: bottom;
+}
+
+.navStatus.active
+{
+    background-color: #88d184;
+}
+
+.navStatus.alert
+{
+    -webkit-animation: navAlert 1s alternate;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: navAlert 1s alternate;
+    -moz-animation-iteration-count: infinite;
+}
+
+.navContent
+{
+    width: 100%;
+
+    padding: 16px 16px 16px 16px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    display: none;
+}
+
+.navContent.active
+{
+    display: block;
+}
+
+.contentBox
+{
+    float: left;
+}
+
+.contentTitle
+{
+    width: 100%;
+
+    padding-left: 4px;
+    padding-right: 4px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    font-size: 18px;
+
+    color: #9cdcfe;
+    //color: #f0f0f0;
+    
+    vertical-align: middle;
+
+    background-color: #1f2933;
+}
+
+.contentTitleButton
+{
+    color: #d5b86c;
+
+    float: right;
+    vertical-align: bottom;
+    cursor: pointer;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.contentTitleButton.hidden 
+{
+    display: none;
+}
+
+.contentArea
+{
+    width: 100%;
+
+    background-color: #2c3640;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    padding: 4px 4px 4px 4px;
+}
+
+.contentArea.noborder
+{
+    padding: 0px;
+}
+
+.contentArea.hidden
+{
+    display: none;
+}
+
+.contentTitleSpacer
+{
+    width: 100%;
+    height: 4px;
+}
+
+.contentSpacer
+{
+    width: 100%;
+    height: 16px;
+
+    float: left;
+}
+
+.newsBox
+{
+    font-size: 18px;
+
+    text-align: center;
+
+    display: none;
+}
+
+.newsBox.active
+{
+    display: block;
+}
+
+.gameLink, .gameNavButton
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    cursor: pointer;
+}
+
+.gameLink.color
+{
+    color: #ffaa02;
+}
+
+.gameLink.hover, .gameNavButton.hover, .guestCheckButton.hover
+{
+    color: #9cdcfe;
+}
+
+.gameNavButton.active
+{
+    color: #88d184;
+}
+
+.gameContent
+{
+    margin: 8px 8px 8px 8px;
+
+    display: none;
+}
+
+.gameContent.active
+{
+    display: block;
+}
+
+.gameInstallStep
+{
+    font-size: 18px;
+}
+
+.gameInstallStepBox
+{
+    margin-left: 14px;
+}
+
+.guestCheckButton
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    cursor: pointer;
+
+    color: #ffaa02;
+}
+
+.guestCheckButton.inactive
+{
+    cursor: default;
+
+    color: #2d2d30;
+}
+
+.playlistButton
+{
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+
+    cursor: pointer;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.playlistButton:hover
+{
+    background-color: #35414d;
+    color: #9cdcfe;
+}
+
+.playlistRow 
+{
+    line-height: 28px;
+}
+
+.playlistRowCell 
+{
+    border-bottom: #435261 solid 1px;
+}
+
+.playlistAddButton
+{
+    width: 48px;
+    text-align: center;
+    font-size: 24px;
+
+    border-bottom: #435261 solid 1px;
+
+    cursor: pointer;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.playlistAddButton:hover 
+{
+    color: #9cdcfe;
+}
+
+.dropMenu ul 
+{
+     display: none;
+}
+
+.dropMenu ul.dropit-submenu 
+{
+    background-color: #2c3640;
+    border: 1px solid #1b2129;
+    padding: 6px 0;
+    margin: 3px 0 0 1px;
+}
+
+.dropMenu ul.dropit-submenu a 
+{
+    display: block;
+    font-size: 14px;
+    line-height: 32px;
+    color: #e9eaed;
+    
+    padding: 0 18px;
+}
+
+.dropMenu ul.dropit-submenu a:hover 
+{
+    background: #35414d;
+    color: #9cdcfe;
+    text-decoration: none;
+}
+
+@-webkit-keyframes navAlert 
+{
+    0% {background-color: #222222;}
+
+    100% {background-color: #45CEEF;}
+}
+
+@-moz-keyframes navAlert 
+{
+    0% {background-color: #222222;}
+
+    100% {background-color: #45CEEF;}
+}
